@@ -117,7 +117,7 @@ export default function SignUpScreen() {
       <View style={[styles.container, {alignItems:"center", justifyContent:"center"}]}>
         <Image source={require("../../assets/images/revenue-i2.png")} style={styles.illustration}/>
         <Text>Sign up</Text> 
-        <br></br>
+        <View style={{ height: 20 }} />
         {error ? (
           <View style={[styles.errorBox, {width:"20%"}]}>
             <Ionicons name="alert-circle" size={24} color={COLORS.expense} />

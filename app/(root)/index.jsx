@@ -8,7 +8,7 @@ import { useEffect } from 'react'
 
 export default function Page() {
   const { user } = useUser()
-  const { transactions, isLoading, error, loadData, deleteTransaction } = useTransactions(user?.id)
+  const { summary, transactions, isLoading, error, loadData, deleteTransaction } = useTransactions(user?.id)
  
   useEffect(() => {
     if (user?.id) {
@@ -36,6 +36,9 @@ export default function Page() {
     <View>
       <SignedIn>
         <Text>Hello {user?.emailAddresses[0].emailAddress}</Text>
+        <Text>Income: {summary.income}</Text>
+        <Text>Expense: {summary.expenses}</Text>
+        <Text>Balance: {summary.balance}</Text>
         <SignOutButton />    
       </SignedIn>
       <SignedOut>

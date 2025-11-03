@@ -57,9 +57,8 @@ export default function Page() {
     >
       <View style={[styles.container, {alignItems:"center", justifyContent:"center"}]}>
       <Image source={require("../../assets/images/revenue-i4.png")} style={styles.illustration}/>
-      <Text>Sign in</Text>
-      <br></br>
-      <div style={{width:"20%"}}>
+      <Text style={{ marginTop: 20, marginBottom: 10 }}>Sign in</Text>
+      <View style={{width:"80%", marginBottom: 10}}>
         {error ? (
             <View style={styles.errorBox}>
               <Ionicons name="alert-circle" size={24} color={COLORS.expense} />
@@ -69,7 +68,7 @@ export default function Page() {
               </TouchableOpacity> 
             </View>
           ) : null}
-        </div>
+      </View>
         <TextInput
           style={[styles.input, error && styles.errorInput]}
           autoCapitalize="none"
